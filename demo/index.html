@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      background: #e6e6e6;
+      margin: 0;
+      height: 1000px;
+    }
+
+    skhemata-menu {
+      --skhemata-menu-background-color: #fff;
+      --skhemata-menu-text-color:  #515151;
+      --skhemata-menu-fonts: sans-serif;
+      --skhemata-menu-transparent-text-color: green;
+      --skhemata-menu-button-color: blue;
+      --skhemata-menu-button-text-color: white;
+    }
+  </style>
+</head>
+<body>
+  <div id="demo"></div>
+
+  <script type="module">
+    import { html, render } from 'lit-html';
+    import '../dist/skhemata-menu.js';
+    let data = {
+      logoImg: {
+        src: "https://cdn.skhemata.com/skhemata/src/assets/images/skhemata_logo.svg",
+        altText: "skhemata"
+      },
+      routes: [
+        {
+          href: '',
+          text: 'Products',
+          subRoutes: [
+            {
+              href: 'product1',
+              text: 'product2',
+            },
+            {
+              href: 'about',
+              text: 'About',
+            },
+          ]
+        },
+        {
+          href: 'pricing',
+          text: 'Pricing',
+        },
+        {
+          href: 'about',
+          text: 'About',
+        },
+        {
+          href: 'live-chat',
+          text: 'Live Chat',
+        },
+        {
+          href: 'contact',
+          text: 'Contact',
+          type: 'button'
+        }
+      ],
+    };
+    
+    render(
+      html`
+        <skhemata-menu
+          config-data=${JSON.stringify(data)}
+          active-route="about"
+        >
+        </skhemata-menu>
+      `,
+      document.querySelector('#demo')
+    );
+  </script>
+</body>
+</html>
