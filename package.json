@@ -1,6 +1,6 @@
 {
   "name": "@skhemata/skhemata-menu",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Skhemata Site Menu Web Component. This web component provides website header menu functionality.",
   "author": "skhemata-menu",
   "main": "dist/index.js",
