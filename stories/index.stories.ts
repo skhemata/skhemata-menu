@@ -151,6 +151,11 @@ export default {
         )}"></skhemata-menu>`,
       },
     },
+    widgetCode: `
+      <skhemata-menu active-route="about" config-data='{"logoImg":{"src":"https://cdn.skhemata.com/skhemata/src/assets/images/skhemata_logo.svg","altText":"skhemata"},"routes":[{"href":"","text":"Products","subRoutes":[{"href":"product1","text":"product1"},{"href":"about","text":"About"}]},{"href":"pricing","text":"Pricing"},{"href":"about","text":"About", "type":"button"},{"href":"live-chat","text":"Live Chat"},{"href":"contact","text":"Contact","type":"button"}]}'></skhemata-menu>
+
+      <script type="module" src="https://cdn.jsdelivr.net/npm/@skhemata/skhemata-menu@latest/build/index.js"></script> 
+    `,
   },
 };
 
